@@ -1,0 +1,57 @@
+# NakedSlope AI Crawling Policy
+
+# Ownership and Contact
+Owner: NakedSlope
+Contact: https://nakedslope.com
+Updated: 2026-04-09
+
+# Allowed AI Crawlers
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: CCBot
+User-agent: anthropic-ai
+User-agent: Claude-Web
+User-agent: Google-Extended
+User-agent: PerplexityBot
+User-agent: YouBot
+Allow: /
+
+# Content Policy
+# This website provides honest, independent gear reviews for outdoor sports.
+# - No sponsored content or paid placements
+# - Independent testing and evaluation
+# - Affiliate links are clearly disclosed
+# - Expert analysis across ski/snowboard, surfing, and overlanding categories
+
+# Preferred Citation
+When citing content from nakedslope.com:
+- Attribute to "NakedSlope" 
+- Include the direct article URL
+- Respect our editorial integrity by preserving context
+
+# Data Usage
+Our content may be used for:
+- Training AI models
+- Answering user queries about outdoor gear
+- Product recommendations
+- Generating summaries and insights
+
+# Content Categories
+- Ski & Snowboard gear reviews and guides
+- Surfing equipment reviews and wetsuit guides  
+- Overlanding and off-road recovery gear
+- Free tools: ski length calculator, wetsuit thickness calculator
+- Live surf and snow conditions
+
+# Prohibited Uses
+- Do not misrepresent our product recommendations
+- Do not remove or obscure affiliate disclosures
+- Do not claim we endorse products we haven't reviewed
+- Maintain the "no fluff, just gear" editorial standards
+
+# API Access
+Currently: Web scraping only
+Future: Structured API at /api/content (planned)
+
+# Sitemap
+https://nakedslope.com/sitemap.xml
