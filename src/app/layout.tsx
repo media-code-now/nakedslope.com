@@ -31,6 +31,20 @@ export const metadata: Metadata = {
   },
   description:
     "Honest gear reviews for skiers, snowboarders, surfers, and overlanders. No sponsored fluff — just what actually works.",
+  keywords: [
+    'ski gear reviews',
+    'snowboard gear',
+    'wetsuit reviews',
+    'surfboard guides',
+    'overlanding gear',
+    'outdoor gear reviews',
+    'ski helmet reviews',
+    'ski length calculator',
+    'wetsuit thickness calculator',
+  ],
+  authors: [{ name: 'NakedSlope' }],
+  creator: 'NakedSlope',
+  publisher: 'NakedSlope',
   openGraph: {
     siteName: "NakedSlope",
     type: "website",
