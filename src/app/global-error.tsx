@@ -1,3 +1,5 @@
+'use client';
+
 import { AlertTriangle, Home } from 'lucide-react';
 
 export default function GlobalError({
