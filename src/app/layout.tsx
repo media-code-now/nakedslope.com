@@ -84,13 +84,12 @@ export default function RootLayout({
       <head>
         <WebsiteSchema url="https://nakedslope.com" />
         <OrganizationSchema url="https://nakedslope.com" />
-      </head>
-      <body className="grain min-h-full flex flex-col">
-        {/* Temporary Avantlink verification script - remove after approval */}
         <Script
           src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=160da96440dd4040c8c3830043ac0b3cce00c53b"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
+      </head>
+      <body className="grain min-h-full flex flex-col">
         <Header />
         <main className="flex-1 pb-[calc(56px+env(safe-area-inset-bottom,0px))] md:pb-0">
           {children}
