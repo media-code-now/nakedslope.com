@@ -14,6 +14,13 @@ import SeasonPicks from "@/components/ui/SeasonPicks";
 import ReelsSlider from "@/components/ui/ReelsSlider";
 import { CATEGORIES, type Category } from "@/types/content";
 import { CATEGORY_BANNERS } from "@/lib/banners";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "NakedSlope | Skiing, Surfing & Overlanding Gear Reviews",
+  description:
+    "Expert gear reviews, buying guides, and calculators for skiing, snowboarding, surfing, and overlanding. Get the best equipment for your next adventure.",
+};
 
 const CATEGORY_ORDER: Category[] = [
   "ski-snowboard",
@@ -47,9 +54,9 @@ export default function HomePage() {
 
       {/* 5 ── Category panels */}
       <section className="py-10 md:py-16 max-w-7xl md:mx-auto">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)] mb-5 px-4 md:px-8">
+        <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)] mb-5 px-4 md:px-8">
           What we cover
-        </p>
+        </h2>
         {/* Mobile: horizontal snap carousel */}
         <div className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-4 pb-2">
           {CATEGORY_ORDER.map((cat, i) => (
@@ -102,9 +109,9 @@ export default function HomePage() {
       {/* 11 ── Latest articles */}
       {latestPosts.length > 0 && (
         <section className="py-10 md:py-16 max-w-7xl md:mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)] mb-5 px-4 md:px-8">
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)] mb-5 px-4 md:px-8">
             Latest
-          </p>
+          </h2>
           {/* Mobile: horizontal snap carousel */}
           <div className="md:hidden flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-4 pb-2">
             {latestPosts.map((post) => (

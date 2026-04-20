@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { CATEGORIES, type Category } from '@/types/content';
 import { getPostsByCategory } from '@/lib/posts';
@@ -22,9 +23,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const cat = CATEGORIES[category as Category];
   return {
-    title: cat.label,
+    title: `${cat.label} Gear Reviews & Guides | NakedSlope`,
     description: cat.description,
-    openGraph: { title: `${cat.label} | NakedSlope`, description: cat.description },
+    openGraph: {
+      title: `${cat.label} Gear Reviews | NakedSlope`,
+      description: cat.description,
+    },
   };
 }
 
@@ -60,9 +64,9 @@ export default async function CategoryPage({ params }: Props) {
       ) : (
         <p className="text-[var(--muted)]">
           First articles dropping soon. Check back or{' '}
-          <a href="/" className="text-[var(--accent)] hover:underline">
+          <Link href="/" className="text-[var(--accent)] hover:underline">
             see what&apos;s live
-          </a>
+          </Link>
           .
         </p>
       )}

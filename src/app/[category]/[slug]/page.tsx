@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -61,16 +62,34 @@ export default async function PostPage({ params }: Props) {
 
   const banner = getArticleBanner(post.slug, cat);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    image: [`https://images.unsplash.com/photo-${banner.id}?q=80&w=2000&auto=format&fit=crop`],
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt,
+    author: {
+      '@type': 'Person',
+      name: 'NakedSlope Editorial',
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero banner */}
       <Banner image={banner} height="md">
-        <nav className="text-xs text-white/50 mb-3">
-          <a href="/" className="hover:text-white/80">Home</a>
+        <nav aria-label="Breadcrumb" className="text-xs text-white/50 mb-3">
+          <Link href="/" className="hover:text-white/80">Home</Link>
           {' / '}
-          <a href={`/${category}/`} className="hover:text-white/80">
+          <Link href={`/${category}/`} className="hover:text-white/80">
             {CATEGORIES[cat].label}
-          </a>
+          </Link>
         </nav>
         <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2 block">
           {CATEGORIES[cat].label}
